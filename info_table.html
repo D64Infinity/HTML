@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Танки Победы
+        </title>
+    </head>
+
+    <body vlink="blue" alink="green">
+        <h2 align="left">
+            Танки Победы 
+        </h2>
+
+        <a href="main_page.html" title="Перейти к главной странице">
+            Основные танки СССР времён ВОВ
+        </a>
+        <p>     </p>
+        <a href="info_table.html" title="Перейти к таблице с информацией">
+            Список танков СССР, произведённых и использовавшихся в годы ВОВ
+        </a>
+        <p>    </p>
+        <hr>
+
+        <details>
+            <summary>График</summary>
+
+            <label>
+                <input type="radio" name="rad" value="0">
+                Тип &emsp; &nbsp;
+            </label>
+            <label> &emsp; &nbsp;&nbsp;
+                <input type="checkbox" name="chckbox" value="0">
+                Макс. число экземпляров
+            </label>
+
+            <br>
+            <label> 
+                <input type="radio" name="rad" value="1">
+                Масса &emsp;
+            </label>
+            <label> &emsp;&nbsp;
+                <input type="checkbox" name="chckbox" value="1">
+                Мин. число экземпляров
+            </label>
+
+            <br>
+            <label>
+                <input type="radio" name="rad" value="2">
+                Калибр &emsp;
+            </label>
+            <label> &nbsp; &nbsp;
+                <input type="checkbox" name="chckbox" value="2">
+                Макс. скорость единицы
+            </label>
+
+            <br>
+            <input type="button" value="Построить">
+        </details>
+
+        <details>
+            <summary>Фильтр</summary>
+
+            <label for="name"> Название: </label>
+            <input type="text" id="name">
+
+            <br><br>
+            <label for="type"> Тип: </label>
+            <input type="text" id="type">
+
+            <br><br>
+            <label> Масса:
+                от <input type="number">
+            </label>
+            <label>
+                до <input type="number">
+            </label>
+
+            <br><br>
+            <label> Калибр:
+                от <input type="number">
+            </label>
+            <label>
+                до <input type="number">
+            </label>
+
+            <br><br>
+            <label> Макс. скорость:
+                от <input type="number">
+            </label>
+            <label>
+                до <input type="number">
+            </label>
+
+            <br><br>
+            <label> Число экземпляров:
+                от <input type="number">
+            </label>
+            <label>
+                до <input type="number">
+            </label>
+
+            <br>
+            <input type="button" value="Найти">
+        </details>
+
+        <details>
+            <summary>Сортировка</summary>
+            
+            <form>
+            <label>
+                Первый уровень 
+                <select>
+                    <option value="0" selected> Название </option>
+                    <option value="1"> Тип </option>
+                    <option value="2" > Масса </option>
+                    <option value="3"> Калибр </option>
+                    <option value="4"> Макс. скорость </option>
+                    <option value="5"> Число экземпляров </option>
+                </select>
+            </label>
+
+            <label>
+                по убыванию?
+                <input type="checkbox" id="frst" value="0">
+            </label>
+
+            <br>
+            <label>
+                Второй уровень 
+                <select>
+                    <option value="0"> Название </option>
+                    <option value="1" selected> Тип </option>
+                    <option value="2" > Масса </option>
+                    <option value="3"> Калибр </option>
+                    <option value="4"> Макс. скорость </option>
+                    <option value="5"> Число экземпляров </option>
+                </select>
+            </label>
+
+            <label>
+                по убыванию?
+                <input type="checkbox" id="scnd" value="0">
+            </label>
+
+            <br>
+            <label>
+                Третий уровень 
+                <select>
+                    <option value="0"> Название </option>
+                    <option value="1"> Тип </option>
+                    <option value="2" selected> Масса </option>
+                    <option value="3"> Калибр </option>
+                    <option value="4"> Макс. скорость </option>
+                    <option value="5"> Число экземпляров </option>
+                </select>
+            </label>
+
+            <label>
+                по убыванию?
+                <input type="checkbox" id="thrd" value="0">
+            </label>
+
+            <p>     </p>
+            <input type="button" value="Сортировать">
+            </form>
+        </details>
+
+        <p>     </p>
+        <table border="1" cellspacing="0">
+            <thead>
+                <tr>
+                <th width="200">
+                    Название
+                </th>
+
+                <th width="200">
+                    Тип
+                </th>
+
+                <th width="125">
+                    Масса (тонн)
+                </th>
+
+                <th width="125">
+                    Калибр (мм)
+                </th>
+
+                <th width="150">
+                    Макс. скорость
+                </th>
+
+                <th width="150">
+                    Число экземпляров
+                </th>
+                </tr>
+            </thead>
+            <tr>
+                <td>
+                    СУ-76
+                </td>
+                <td>
+                    САУ
+                </td>
+                <td>
+                    11,2
+                </td>
+                <td>
+                    76
+                </td>
+                <td>
+                    45
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    СУ-85
+                </td>
+                <td>
+                    САУ
+                </td>
+                <td>
+                    15,5
+                </td>
+                <td>
+                    85
+                </td>
+                <td>
+                    51
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    СУ-100
+                </td>
+                <td>
+                    САУ
+                </td>
+                <td>
+                    31
+                </td>
+                <td>
+                    100
+                </td>
+                <td>
+                    50
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    СУ-122
+                </td>
+                <td>
+                    САУ
+                </td>
+                <td>
+                    26,9
+                </td>
+                <td>
+                    122
+                </td>
+                <td>
+                    40
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    СУ-152
+                </td>
+                <td>
+                    САУ
+                </td>
+                <td>
+                    45,5
+                </td>
+                <td>
+                    152
+                </td>
+                <td>
+                    35
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    ИСУ-152
+                </td>
+                <td>
+                    САУ
+                </td>
+                <td>
+                    46
+                </td>
+                <td>
+                    152
+                </td>
+                <td>
+                    40
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    ИСУ-122
+                </td>
+                <td>
+                    САУ
+                </td>
+                <td>
+                    46
+                </td>
+                <td>
+                    122
+                </td>
+                <td>
+                    40
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    КВ-1
+                </td>
+                <td>
+                    Тяжёлый танк
+                </td>
+                <td>
+                    43
+                </td>
+                <td>
+                    57/76
+                </td>
+                <td>
+                    34
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    КВ-1с
+                </td>
+                <td>
+                    Тяжёлый танк
+                </td>
+                <td>
+                    42,3
+                </td>
+                <td>
+                    57/76
+                </td>
+                <td>
+                    43
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    КВ-2
+                </td>
+                <td>
+                    Тяжёлый танк
+                </td>
+                <td>
+                    52
+                </td>
+                <td>
+                    107/152
+                </td>
+                <td>
+                    34
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    КВ-85
+                </td>
+                <td>
+                    Тяжёлый танк
+                </td>
+                <td>
+                    42
+                </td>
+                <td>
+                    85/100
+                </td>
+                <td>
+                    43
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    КВ-122
+                </td>
+                <td>
+                    Тяжёлый танк
+                </td>
+                <td>
+                    46,5-49
+                </td>
+                <td>
+                    122
+                </td>
+                <td>
+                    38
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    ИС
+                </td>
+                <td>
+                    Тяжёлый танк
+                </td>
+                <td>
+                    46
+                </td>
+                <td>
+                    85
+                </td>
+                <td>
+                    37
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    ИС-2
+                </td>
+                <td>
+                    Тяжёлый танк
+                </td>
+                <td>
+                    ~46
+                </td>
+                <td>
+                    122
+                </td>
+                <td>
+                    37
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    ИС-3
+                </td>
+                <td>
+                    Тяжёлый танк
+                </td>
+                <td>
+                    49
+                </td>
+                <td>
+                    122
+                </td>
+                <td>
+                    40
+                </td>
+                <td>
+
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    Т-34-57
+                </td>
+                <td>
+                    Средний танк
+                </td>
+                <td>
+                    28,5
+                </td>
+                <td>
+                    57
+                </td>
+                <td>
+                    56
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Т-34-85
+                </td>
+                <td>
+                    Средний танк
+                </td>
+                <td>
+                    32
+                </td>
+                <td>
+                    85
+                </td>
+                <td>
+                    51
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Т-34-76
+                </td>
+                <td>
+                    Средний танк
+                </td>
+                <td>
+                    ~30
+                </td>
+                <td>
+                    76
+                </td>
+                <td>
+                    56
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    БТ-2
+                </td>
+                <td>
+                    Лёгкий танк
+                </td>
+                <td>
+                    11,3
+                </td>
+                <td>
+                    45
+                </td>
+                <td>
+                    70
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    БТ-5
+                </td>
+                <td>
+                    Лёгкий танк
+                </td>
+                <td>
+                    11,5
+                </td>
+                <td>
+                    45
+                </td>
+                <td>
+                    72
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    БТ-7
+                </td>
+                <td>
+                    Лёгкий танк
+                </td>
+                <td>
+                    ~11
+                </td>
+                <td>
+                    45
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    БТ-7 арт.
+                </td>
+                <td>
+                    САУ
+                </td>
+                <td>
+                    14
+                </td>
+                <td>
+                    76
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Т-26
+                </td>
+                <td>
+                    Лёгкий танк
+                </td>
+                <td>
+                    ~10
+                </td>
+                <td>
+                    45
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Т-60
+                </td>
+                <td>
+                    Лёгкий танк
+                </td>
+                <td>
+                    ~6
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Т-70
+                </td>
+                <td>
+                    Лёгкий танк
+                </td>
+                <td>
+                    ~9
+                </td>
+                <td>
+                    45
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Т-80
+                </td>
+                <td>
+                    Лёгкий танк
+                </td>
+                <td>
+                    ~11
+                </td>
+                <td>
+                    45
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Т-50
+                </td>
+                <td>
+                    Лёгкий танк
+                </td>
+                <td>
+                    13,5
+                </td>
+                <td>
+                    45
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Т-28
+                </td>
+                <td>
+                    Средний танк
+                </td>
+                <td>
+                    28
+                </td>
+                <td>
+                    76
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    СУ-76М
+                </td>
+                <td>
+                    САУ
+                </td>
+                <td>
+                    10,5
+                </td>
+                <td>
+                    76
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    КВ-220
+                </td>
+                <td>
+                    Тяжёлый танк
+                </td>
+                <td>
+                    62
+                </td>
+                <td>
+                    85
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    РБТ-5
+                </td>
+                <td>
+                    Ракетный танк
+                </td>
+                <td>
+                    ~12
+                </td>
+                <td>
+                    45
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    ХТ-26
+                </td>
+                <td>
+                    Огнемётный танк
+                </td>
+                <td>
+                    9,6
+                </td>
+                <td>
+                    7,62 (пулемёт) + огнемёт
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    ОТ-34/ТО-34
+                </td>
+                <td>
+                    Огнемётный танк
+                </td>
+                <td>
+                    ~30
+                </td>
+                <td>
+                    76 + огнемёт
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    СУ-76и
+                </td>
+                <td>
+                    САУ
+                </td>
+                <td>
+                    22,5
+                </td>
+                <td>
+                    76
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    СУ-100Y
+                </td>
+                <td>
+                    САУ
+                </td>
+                <td>
+                    64
+                </td>
+                <td>
+                    130
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    БТ-СВ
+                </td>
+                <td>
+                    Лёгкий танк
+                </td>
+                <td>
+                    25
+                </td>
+                <td>
+                    45
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    СУ-5
+                </td>
+                <td>
+                    САУ
+                </td>
+                <td>
+                    ~10
+                </td>
+                <td>
+                    122
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    ЗСУ-37
+                </td>
+                <td>
+                    ЗСУ
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Т-40
+                </td>
+                <td>
+                    Лёгкий танк
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Т-44
+                </td>
+                <td>
+                    Средний танк
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Т-35
+                </td>
+                <td>
+                    Тяжёлый танк
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    КВ-6
+                </td>
+                <td>
+                    Огнемётный танк
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    КВ-8
+                </td>
+                <td>
+                    Огнемётный танк
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    БМ-8-24
+                </td>
+                <td>
+                    РСЗО 
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    М3 Стюарт
+                </td>
+                <td>
+                    Лёгкий танк (ленд-лиз)
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    М3 Ли
+                </td>
+                <td>
+                    Средний танк (ленд-лиз)
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Шерман
+                </td>
+                <td>
+                    Средний танк (ленд-лиз)
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Матильда
+                </td>
+                <td>
+                    Средний танк (ленд-лиз)
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Валентайн
+                </td>
+                <td>
+                    Лёгкий танк (ленд-лиз)
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Черчилль
+                </td>
+                <td>
+                    Тяжёлый танк (ленд-лиз)
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+        </table>
+    </body>
+</html>
