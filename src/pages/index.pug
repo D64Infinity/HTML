@@ -1,0 +1,20 @@
+extends template.pug
+    
+block nav
+  nav 
+    +createMenu(dictMenu, 'Главная')
+
+block content
+  div.images
+    each pict in listImages 
+        a(href= "building.html")
+          img(src= require("../images/" + pict))
+
+  article 
+    each item in listSections 
+        section 
+          +formList(exmpl, 1)
+
+
+
+
