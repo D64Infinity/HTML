@@ -1,0 +1,43 @@
+function resolveRoute1(text) {
+    let resolvedText = '';
+    let len = text.length;
+    let sqr = Math.ceil(Math.sqrt(len));
+    let mtrx = [];
+    
+    for (let i = 0; i < sqr; i++) {
+        mtrx[i] = [];
+    }
+    
+    let iter = 0;
+    for (let i = 0; i < sqr; i++) {
+        for (let j = 0; j < sqr; j++) {
+            mtrx[i][j] = text[iter];
+            iter++;
+            if (iter === len) {
+                break;
+            }
+        }
+        if (iter === len) {
+            break;
+        }
+    }
+    
+    iter = 0;
+    let cycleIter = 1;
+    while (iter !== len) {
+        if (cycleIter % 2 !== 0) {
+           for (let i = 0; i < sqr; i++) {
+                resolvedText += mtrx[i][cycleIter - 1];
+                iter++;
+            }
+        } else {
+            for (let i = sqr - 1; i >= 0; i--) {
+                resolvedText += mtrx[i][cycleIter - 1];
+                iter++;
+            }
+        }
+        cycleIter++;
+    }
+    return resolvedText;
+}
+console.log(resolveRoute1("кегомадлетсотуси_то_до_оло_-тнпчп_гнтея_т_доаоа_,ооенз_хви_трмаоы_нк-е_дтдтетово_"));
